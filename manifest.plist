@@ -17,13 +17,13 @@
             <key>metadata</key>
             <dict>
                 <key>bundle-identifier</key>
-                <string>com.aruistar.cmcapp</string>
+                <string>test.SaleSys</string>
                 <key>bundle-version</key>
                 <string>1.0</string>
                 <key>kind</key>
                 <string>software</string>
                 <key>title</key>
-                <string>cmcapp</string>
+                <string>学易销售</string>
             </dict>
         </dict>
     </array>
