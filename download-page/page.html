@@ -24,7 +24,12 @@
                 var url = "https://anubis9000.github.io/downloadIpa/app-release.apk";
                 event.preventDefault();
                 var ua = navigator.userAgent.toLowerCase();
-                window.open(url);
+                if ((ua.match(/MicroMessenger/i) == "micromessenger") || (ua.match(/\sQQ/i) == " qq" && /iphone/i.test(ua) == false)) {
+                    jQuery("#cloth").css("display", "block");
+                    jQuery("#dialog").css("display", "block");
+                } else {
+                    window.open(url);
+                }
             });
         });
     </script>
@@ -48,9 +53,16 @@
         .down-list li img { vertical-align: top; width: 37px; }
         .down-list li a p { font-size: 20px; color: #3e3e3e; line-height: 40px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         .down-list li a:hover p { color: #333333; }
+        #cloth { position: fixed; background: #000; opacity: 0.3; z-index: 9998; width: 100%; height: 100%; display: none; }
+        #dialog { position: absolute; z-index: 9999; float: left; width: 250px; height: 250px; right: 0px; top: 0px; }
     </style>
 </head>
 <body>
+    <div id="cloth">
+    </div>
+    <div id="dialog" style="display: none;">
+        <img src="./page_files/weibo.png" id="weibo">
+    </div>
     <header class="wrapper" style="font-size: 22px;">凤凰学易销售系统手机客户端下载</header>
     <div class="wrapper main">
         <div>
